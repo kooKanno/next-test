@@ -9,6 +9,8 @@ export default function BlogId({ blog }) {
             <h1 className={styles.title}>{blog.title}</h1>
             {/* 記事公開時刻の表示 */}
             <p className={styles.publishedAt}>{blog.publishedAt}</p>
+            {/* カテゴリの表示 */}
+            <p>{blog.category && blog.category.name}</p>
             {/* 記事本文の表示 */}
             <div 
             //CMSから呼んできたHTMLを表示するためにdangerouslySetInnerHTMLを使う
