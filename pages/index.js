@@ -22,7 +22,7 @@ export default function Home({ blog }) {
 
 //microCMSのデータを取得するビルド時にサーバー側で呼ばれる関数
 export const getStaticProps = async () => {
-    //定数dataの中にCMSから呼んできたデータを代入
+    //定数dataの中にCMSから呼んできたデータを代入。limitで呼んでくる個数の制限もできる。
     const data = await client.get({ endpoint: "blog", queries: {limit: 2} });
     //props blogの中に呼んできた内容を入れて返す
     return {
